@@ -6,6 +6,12 @@ class App < Sinatra::Base
     erb :food_form
   end
 
-  # Add your post route and action below
+post '/flower' do 
+  @name = params[:username]
+  @fav_food = params[:food]
+ 
+  @flowers = params[:type_flower]
+  erb :flower 
+end 
 
 end
